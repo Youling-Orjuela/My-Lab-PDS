@@ -20,7 +20,7 @@ import numpy as np
 
 **numpy**: Permite trabajar con arrays y realizar cálculos numéricos.
 
-###Registro y extracción de la señal
+### Registro y extracción de la señal
 ```python
 # Nombre del archivo del registro (Parte 1)
 ecg1 = 'a02'
@@ -481,3 +481,30 @@ SNR estadístico: -0.0011627978179512143
 
 [![Ruido-artefacto.png](https://i.postimg.cc/j50FB4cV/Ruido-artefacto.png)](https://postimg.cc/Ty00DmBQ)
 [![Ruido-artefacto-2.png](https://i.postimg.cc/QdzPJ3Wd/Ruido-artefacto-2.png)](https://postimg.cc/HrQBTF2q)
+
+## Análisis de los resultados obtenidos
+
+### Cálculo de la media, desviación estándar y coeficiente de variación
+
+En cuanto a la media obtenida tanto de manera manual como por medio de las funciones de phyton, se evidencia que ambos valores de voltaje son negativos (aprox. -0,00074), lo cual dice que los valores de voltaje en el ECG evaluado tiene como magnitud promedio el valor anteriormente mencionado ya que en el transcurso de la señal, esta experimenta cambios de voltaje entre valores positivos y negativos, predominando los negativos.
+
+Por otro lado, el valor de la desviación estándar en ambos métodos dio un valor aproximado a 0,137. Este valor nos indica que la dispersion de datos es bajo. Además, el valor del coeficiente de variación en ambos métodos calculados dio un valor de -185.210.
+
+### Ruidos y relación SNR
+
+1. Ruido Gaussiano: Al analizar el comportamiento del SNR y el valor de amplitud del ruido, se observa que son valores inversamente proporcionales; lo que indica que a mayor amplitud, la relación SNR es baja y viceversa. En el caso de una amplitud alta, en el cual se tiene un SNR cercano a 0 dB, nos indica que la señal del ruido es alto y dificulta la lectura del ECG de manera correcta. En el caso de una amplitud baja, el valor de SNR es mayor, lo cual dice que la señal es mucho mas fuerte que el ruido y por ende, la lectura del ECG será optima. 
+
+2. Ruido impulsivo: Dada la naturaleza del ruido impulsivo, la interpretación del valor de SNR será de manera diferente, ya que este tipo de interferencia no se propaga por toda la señal. El valor negativo de esta lectura indica la fuerza con la cual esta alteración se hace presente. A pesar de que se presente por picos breves, presentan una gran amplitud, mucho mayores a los picos mostrados en un ECG normal.
+
+3. Ruido tipo artefacto: En el caso del ruido tipo artefacto, su relación entre SNR y amplitud de ruido es inversamente proporcional. Si se tiene un ruido de alta amplitud, el SNR es cercano a 0, lo cual indica que el ruido es alto y la lectura de la señal será deficiente. Ante un ruido de alta baja amplitud, el SNR es alto y su afectación a la señal no es notoria, por lo cual la lectura se puede hacer de una manera clara
+
+## Bibliografía
+https://medium.com/@ms_somanna/guide-to-adding-noise-to-your-data-using-python-and-numpy-c8be815df524 
+https://pysdr.org/es/content-es/noise.html
+https://www.wavewalkerdsp.com/2024/07/01/calculate-signal-to-noise-ratio-snr-in-simulation/
+
+
+## Colaboradores
+1. Youling Andrea Orjuela Bermúdez (5600815)
+2. Jose Manuel Gomez Carrillo (5600793)
+3. Juan Camilo Quintero Velandia (5600745)
