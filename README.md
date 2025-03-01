@@ -1,4 +1,4 @@
-# Laboratorio 1 Análisis estadístico de la señal
+# Laboratorio 1 Análisis estadístico de la señal.
 ## Introducción 
 El siguiente código tiene como propósito el análisis estadístico de una señal fisiológica; siendo en este caso una señal de ECG (electrocardiograma). Para este análisis, el ECG obtenido pertenece a un caso en el cual la muestra está siendo evaluada bajo condiciones de apnea. Teniendo en cuenta la señal mencionada, se calcularán los estadísticos de la gráfica para su posterior análisis bajo condiciones estándares. Posteriormente, se agregaran diferentes tipos de ruidos (Gaussiano, tipo impulso y artefacto), que usualmente se presentan en la captura de señales y así mismo, evidenciar el comportamiento dentro de la captura y representación de la señal de forma gráfica.
 
